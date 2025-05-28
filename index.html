@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">PORTFOLIO </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggle-mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home-section">
+    <h1>Hello,My name is ALSHIFA FATIMA and I'm a Full Stack Developer 👋</h1>
+    <p>I build things for the web that look good and work even better.</p>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>A cool mini app I made with HTML/CSS/JS.</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>A college project that went way beyond the syllabus.</p>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>My fun weekend project turned side hustle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+      I'm not just another coder—I’m the pixel-perfect, bug-busting, coffee-fueled warrior who turns ideas into reality. <br>
+      I vibe with clean code, cool UI, and the occasional meme break.
+    </p>
+    <a href="file:///C:/Users/lenovo/Downloads/Alshifa_fatima_Resume%20(2).pdf" download class="resume-btn">Download Resume</a>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Let’s Connect</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Say something..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social-links">
+      <a href="https://github.com/alshifatima" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/alshifafatima01/" target="_blank">LinkedIn</a>
+      <a href="fatimaalshifa38@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p></p>
+  </footer>
+</body>
+
+</html>
+
+<!-- styles.css -->
+<style>
+:root {
+  --bg-color: #f3f9fc;
+  --text-color: #000000;
+  --accent-color: #054159;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #054159;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--accent-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+nav ul li a, #toggle-mode {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project {
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 250px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.resume-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+form input, form textarea {
+  display: block;
+  width: 80%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+</style>
+
+<!-- script.js -->
+<script>
+document.getElementById('toggle-mode').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+</script>
